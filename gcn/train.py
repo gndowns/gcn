@@ -75,6 +75,8 @@ sess.run(tf.global_variables_initializer())
 
 cost_val = []
 
+t_train = time.time()
+
 # Train model
 for epoch in range(FLAGS.epochs):
 
@@ -99,7 +101,7 @@ for epoch in range(FLAGS.epochs):
         print("Early stopping...")
         break
 
-print("Optimization Finished!")
+print("Optimization finished in: {:.5f} seconds".format(time.time() - t_train))
 
 # Testing
 test_cost, test_acc, test_duration = evaluate(features, support, y_test, test_mask, placeholders)
