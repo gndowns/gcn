@@ -72,7 +72,7 @@ TODO: Could compare this with # epochs/number of hidden layers/learning rate/tra
 Results on test set from model using different dropout rates.
 
 | Dropout Rate | Cost      | Accuracy | Training Time |
-| -----------— | --------- | -------- | ------------- |
+| ------------ | --------- | -------- | ------------- |
 | 0.1	         | 0.79744   | 0.80200  | 7.83903       |
 | 0.2          | 0.81719   | 0.81500  | 6.70383       |
 | 0.3          | 0.84194   | 0.80800  | 7.98924       |
