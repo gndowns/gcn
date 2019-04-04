@@ -72,8 +72,8 @@ TODO: Could compare this with # epochs/number of hidden layers/learning rate/tra
 Results on test set from model using different dropout rates.
 
 | Dropout Rate | Cost      | Accuracy | Training Time |
-| — — — — — —— | ————————- | ———————- | ————————————- |
-| 0.1	       | 0.79744   | 0.80200  | 7.83903       |
+| -----------— | --------- | -------- | ------------- |
+| 0.1	         | 0.79744   | 0.80200  | 7.83903       |
 | 0.2          | 0.81719   | 0.81500  | 6.70383       |
 | 0.3          | 0.84194   | 0.80800  | 7.98924       |
 | 0.4          | 0.87293   | 0.80200  | 5.68244       |
@@ -88,7 +88,7 @@ Results on test set from model using different dropout rates.
 Results on test set from model using different number of training epochs.
 
 | Training Epochs | Cost     | Accuracy  | Training Time |
-| ——————————————- | ———————- | ————————— | ————————————- |
+| --------------- | -------- | --------- | ------------- |
 | 100             | 0.88983  | 0.80700   | 6.57270       |
 | 200             | 0.88983  | 0.80700   | 5.64114       |
 | 300             | 0.88983  | 0.80700   | 5.50688       |
@@ -106,7 +106,7 @@ Results on test set from model using different number of training epochs.
 Results on test set from model using different weight decay values.
 
 | Weight Decay | Cost    | Accuracy   | Training Time |
-| ———————————- | ——————- | ——————————-| —————————————-|
+| ------------ | ------- | -----------| ------------- |
 | 5e-1         | 1.95187 | 0.24900    | 10.89320      |
 | 5e-2         | 1.83403 | 0.76900    | 7.81988       |
 | 5e-3         | 1.19161 | 0.80500    | 9.39958       |
@@ -124,7 +124,7 @@ Results on test set from model using different weight decay values.
 Results on test set from model using different early stopping values.
 
 | Early Stopping | Cost    | Accuracy   | Training Time |
-| ———————————-   | ——————- | ——————————-| —————————————-|
+| -------------- | ------- | ---------- | ------------- |
 | 0              | 0.70782 | 0.79800    | 19.88909      |
 | 5              | 0.80570 | 0.82000    | 2.20090       |
 | 10             | 0.81234 | 0.81200    | 2.56786       |
@@ -140,7 +140,7 @@ Results on test set from model using different early stopping values.
 Results on test set from model using different Max Chebyshev degrees.
 
 | Max Chebyshev  | Cost    | Accuracy   | Training Time |
-| ———————————-   | ——————- | ——————————-| —————————————-|
+| -------------- | ------- | ---------- | ------------- |
 | 0              | 0.81234 | 0.81200    | 2.68815       |
 | 1              | 0.81234 | 0.81200    | 2.84257       |
 | 2              | 0.81234 | 0.81200    | 2.67853       |
