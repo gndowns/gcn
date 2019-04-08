@@ -32,8 +32,24 @@ Test different normalization methods on the adjacency matrix.
 | Normalization       | Cost    | Accuracy | Training Time |
 | ------------------- | ------- | -------- | ------------- |
 | Symmetric (default) | 1.00983 | 0.8130   | 10.75514      | 
-| None                | 1.00997 | 0.7860   |  1.53068\*    |
 | One-Sided           | 0.96358 | 0.820    | 10.72428      |
+| None                | 1.00997 | 0.7860   |  1.53068\*    |
+
+
+#### Citesser Dataset
+| Normalization       | Cost    | Accuracy | Training Time |
+| ------------------- | ------- | -------- | ------------- |
+| Symmetric (default) | 1.28585 | 0.720    | 17.17417      | 
+| One-sided           | 1.26499 | 0.710    | 16.26017      |  
+| None                | 1.41121 | 0.6520   |  2.15959\*    |
+
+
+#### Pubmed Dataset
+| Normalization       | Cost    | Accuracy | Training Time |
+| ------------------- | ------- | -------- | ------------- |
+| Symmetric (default) | 0.74244 | 0.7920   | 77.79246      |
+| One-sided           | 0.71863 | 0.780    | 62.49945\*    |
+| None                | 0.94313 | 0.7590   |  8.88433\*    | 
 
 
 ## Optimizer

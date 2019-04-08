@@ -128,6 +128,8 @@ def normalize_adj(adj):
 
     # NOTE: change normalization method here (default is symmetric)
     normalization_method = 'symmetric'
+    #  normalization_method = 'one_sided'
+    #  normalization_method = 'none'
 
     # Default method given in the paper: symmetric normalization
     if normalization_method == 'symmetric':
@@ -154,6 +156,7 @@ def preprocess_adj(adj):
     # NOTE: edit to change whether self loops are added to the graph
     # Default: True
     self_loops = True
+    #  self_loops = False
     if self_loops:
       adj_normalized = normalize_adj(adj + sp.eye(adj.shape[0]))
     else:
