@@ -1,5 +1,41 @@
 # AML Mini Project 4
 
+## Self Loops
+Results on test set from model with & without self-loops added to the graph.
+This is implemented by adding the identity to the adjacneny matrix in `utils.py`.
+
+#### Cora Dataset
+| Self-Loops Included? | Cost    | Accuracy | Training Time |
+| -------------------- | ------- | -------- | ------------- |
+| yes (default)        | 1.00983 | 0.8130   | 10.75514      | 
+| no                   | 1.07126 | 0.8090   | 10.22720      |
+
+
+#### Citeseer Dataset
+| Self-Loops Included? | Cost    | Accuracy | Training Time |
+| -------------------- | ------- | -------- | ------------- |
+| yes (default)        | 1.28585 | 0.720    | 17.72044      | 
+| no                   | 1.34123 | 0.6980   | 15.64948      |
+
+
+#### Pubmed Dataset
+| Self-Loops Included? | Cost    | Accuracy | Training Time |
+| -------------------- | ------- | -------- | ------------- |
+| yes (default)        | 0.74244 | 0.7920   | 77.79246      |
+| no                   | 0.77259 | 0.7810   | 73.63669      |
+
+
+## Normalization
+Test different normalization methods on the adjacency matrix.
+
+#### Cora Dataset
+| Normalization       | Cost    | Accuracy | Training Time |
+| ------------------- | ------- | -------- | ------------- |
+| Symmetric (default) | 1.00983 | 0.8130   | 10.75514      | 
+| None                | 1.00997 | 0.7860   |  1.53068\*    |
+| One-Sided           | 0.96358 | 0.820    | 10.72428      |
+
+
 ## Optimizer
 
 Results on test set from model using default parameters but trained on different optimizers. (Optimizers from: https://www.tensorflow.org/api_docs/python/tf/train)
