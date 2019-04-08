@@ -119,19 +119,46 @@ def preprocess_features(features):
     return sparse_to_tuple(features)
 
 
+# NOTE: edit this function to control normalization
 def normalize_adj(adj):
     """Symmetrically normalize adjacency matrix."""
     adj = sp.coo_matrix(adj)
     rowsum = np.array(adj.sum(1))
-    d_inv_sqrt = np.power(rowsum, -0.5).flatten()
-    d_inv_sqrt[np.isinf(d_inv_sqrt)] = 0.
-    d_mat_inv_sqrt = sp.diags(d_inv_sqrt)
-    return adj.dot(d_mat_inv_sqrt).transpose().dot(d_mat_inv_sqrt).tocoo()
+
+
+    # NOTE: change normalization method here (default is symmetric)
+    normalization_method = 'symmetric'
+
+    # Default method given in the paper: symmetric normalization
+    if normalization_method == 'symmetric':
+      d_inv_sqrt = np.power(rowsum, -0.5).flatten()
+      d_inv_sqrt[np.isinf(d_inv_sqrt)] = 0.
+      d_mat_inv_sqrt = sp.diags(d_inv_sqrt)
+      return adj.dot(d_mat_inv_sqrt).transpose().dot(d_mat_inv_sqrt).tocoo()
+
+    # for one-sided normalization, i.e D^-1 *
+    elif normalization_method == 'one_sided':
+      d_inv_sqrt = np.power(rowsum, -1.0).flatten()
+      d_inv_sqrt[np.isinf(d_inv_sqrt)] = 0.
+      d_mat_inv_sqrt = sp.diags(d_inv_sqrt)
+      return adj.dot(d_mat_inv_sqrt).transpose().tocoo()
+
+    # For no normalization
+    elif normalization_method == 'none':
+      return adj
+
 
 
 def preprocess_adj(adj):
     """Preprocessing of adjacency matrix for simple GCN model and conversion to tuple representation."""
-    adj_normalized = normalize_adj(adj + sp.eye(adj.shape[0]))
+    # NOTE: edit to change whether self loops are added to the graph
+    # Default: True
+    self_loops = True
+    if self_loops:
+      adj_normalized = normalize_adj(adj + sp.eye(adj.shape[0]))
+    else:
+      adj_normalized = normalize_adj(adj)
+
     return sparse_to_tuple(adj_normalized)
 
 
