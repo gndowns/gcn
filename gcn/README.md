@@ -4,6 +4,8 @@
 
 Results on test set from model using default parameters but trained on different optimizers. (Optimizers from: https://www.tensorflow.org/api_docs/python/tf/train)
 
+### Cora
+
 | Optimizer         | Cost          | Accuracy     | Training Time |
 | ----------------- | ------------- | ------------ | ------------- |
 | GradientDescent   | 1.00631       | 0.80900      | 12.59550      |
@@ -12,9 +14,31 @@ Results on test set from model using default parameters but trained on different
 | RMSProp           | 1.00631       | 0.80900      | 12.66784      |
 | Adam              | 1.00631       | 0.80900      | 12.71539      |
 
+### Citeseer
+
+| Optimizer         | Cost          | Accuracy     | Training Time |
+| ----------------- | ------------- | ------------ | ------------- |
+| GradientDescent   | 1.29654       | 0.71500      | 20.88426      |
+| Momentum          | 1.29654       | 0.71500      | 20.75164      |
+| Adagrad           | 1.29654       | 0.71500      | 21.08371      |
+| RMSProp           | 1.29654       | 0.71500      | 20.65680      |
+| Adam              | 1.29654       | 0.71500      | 20.57743      |
+
+### Pubmed
+
+| Optimizer         | Cost          | Accuracy     | Training Time |
+| ----------------- | ------------- | ------------ | ------------- |
+| GradientDescent   | 0.72345       | 0.79200      | 151.96015     | *Early stopping
+| Momentum          | 0.72345       | 0.79200      | 152.09211     | *Early stopping
+| Adagrad           | 0.72345       | 0.79200      | 152.60650     | *Early stopping
+| RMSProp           | 0.72345       | 0.79200      | 153.24154     | *Early stopping
+| Adam              | 0.72345       | 0.79200      | 152.10228     | *Early Stopping
+
 ## Activation
 
 Results on test set from model using different activation functions.
+
+### Cora
 
 | Activation        | Cost          | Accuracy     | Training Time |
 | ----------------- | ------------- | ------------ | ------------- |
@@ -22,10 +46,28 @@ Results on test set from model using different activation functions.
 | Sigmoid           | 1.00631       | 0.80900      | 12.47668      |
 | Softmax           | 1.00631       | 0.80900      | 12.55104      |
 
+### Citeseer
+
+| Activation        | Cost          | Accuracy     | Training Time |
+| ----------------- | ------------- | ------------ | ------------- |
+| ReLU              | 1.29654       | 0.71500      | 20.57743      |
+| Sigmoid           | 1.29654       | 0.71500      | 20.83665      |
+| Softmax           | 1.29654       | 0.71500      | 21.06329      |
+
+### Pubmed
+
+| Activation        | Cost          | Accuracy     | Training Time |
+| ----------------- | ------------- | ------------ | ------------- |
+| ReLU              | 0.72345       | 0.79200      | 152.10228     | *Early Stopping
+| Sigmoid           | 0.72345       | 0.79200      | 153.10513     | *Early Stopping
+| Softmax           | 0.72345       | 0.79200      | 154.14993     | *Early Stopping
+
 ## Learning Rate
 
 Results on test set from model using different learning rates.
 TODO: Could compare this with # epochs/number of hidden layers/number of hidden units
+
+### Cora
 
 | Learning Rate     | Cost          | Accuracy     | Training Time |
 | ----------------- | ------------- | ------------ | ------------- |
@@ -36,10 +78,34 @@ TODO: Could compare this with # epochs/number of hidden layers/number of hidden 
 | 1e-5              | 1.95354       | 0.06900      | 13.08847      |
 | 1e-6              | 1.95428       | 0.06100      | 12.88972      |
 
+### Citeseer
+
+| Learning Rate     | Cost          | Accuracy     | Training Time |
+| ----------------- | ------------- | ------------ | ------------- |
+| 0.1               | 1.30396       | 0.68600      | 4.89338       | *Early stopping
+| 0.01              | 1.29654       | 0.71500      | 20.57743      |
+| 0.001             | 1.73595       | 0.64900      | 21.08239      |
+| 1e-4              | 1.78960       | 0.50400      | 20.60369      |
+| 1e-5              | 1.79880       | 0.18700      | 20.80645      |
+| 1e-6              | 1.79971       | 0.14800      | 21.09917      |
+
+### Pubmed
+
+| Learning Rate     | Cost          | Accuracy     | Training Time |
+| ----------------- | ------------- | ------------ | ------------- |
+| 0.1               | 0.72629       | 0.78600      | 30.86536      | *Early stopping
+| 0.01              | 0.72345       | 0.79200      | 152.10228     | *Early Stopping
+| 0.001             | 0.98747       | 0.71500      | 176.59620     |
+| 1e-4              | 1.09804       | 0.56200      | 175.57387     |
+| 1e-5              | 1.10568       | 0.39800      | 176.01984     |
+| 1e-6              | 1.10622       | 0.36900      | 177.18335     |
+
 ## Number of hidden layers
 
 Results on test set from model using different numbers of hidden layers.
 TODO: Could compare this with # epochs/learning rate
+
+### Cora
 
 | Number of hidden layers  | Cost          | Accuracy     | Training Time |
 | ------------------------ | ------------- | ------------ | ------------- |
@@ -50,10 +116,34 @@ TODO: Could compare this with # epochs/learning rate
 | 4                        | 1.00631       | 0.80900      | 12.73489      |
 | 5                        | 1.00631       | 0.80900      | 12.51912      |
 
+### Citeseer
+
+| Number of hidden layers  | Cost          | Accuracy     | Training Time |
+| ------------------------ | ------------- | ------------ | ------------- |
+| 0                        | 1.29654       | 0.71500      | 20.70505      |
+| 1                        | 1.29654       | 0.71500      | 20.57743      |
+| 2                        | 1.29654       | 0.71500      | 20.73452      |
+| 3                        | 1.29654       | 0.71500      | 20.74501      |
+| 4                        | 1.29654       | 0.71500      | 20.39031      |
+| 5                        | 1.29654       | 0.71500      | 20.08235      |
+
+### Pubmed
+
+| Number of hidden layers  | Cost          | Accuracy     | Training Time |
+| ------------------------ | ------------- | ------------ | ------------- |
+| 0                        | 0.72345       | 0.79200      | 152.88821     | *Early Stopping
+| 1                        | 0.72345       | 0.79200      | 152.10228     | *Early Stopping
+| 2                        | 0.72345       | 0.79200      | 152.51260     | *Early Stopping
+| 3                        | 0.72345       | 0.79200      | 152.38210     | *Early Stopping
+| 4                        | 0.72345       | 0.79200      | 152.09245     | *Early Stopping
+| 5                        | 0.72345       | 0.79200      | 152.87341     | *Early Stopping
+
 ## Number of hidden units
 
 Results on test set from model using different numbers of hidden units.
 TODO: Could compare this with # epochs/number of hidden layers/learning rate/training epochs/early stopping
+
+### Cora
 
 | Number of hidden units   | Cost          | Accuracy     | Training Time |
 | ------------------------ | ------------- | ------------ | ------------- |
@@ -66,6 +156,34 @@ TODO: Could compare this with # epochs/number of hidden layers/learning rate/tra
 | 256                      | 0.93944       | 0.81100      | 5.55288       | *Early stopping
 | 512                      | 0.92569       | 0.80900      | 6.87969       | *Early stopping
 | 1024                     | 0.88983       | 0.80700      | 10.71723      | *Early stopping
+
+### Citeseer
+
+| Number of hidden units   | Cost          | Accuracy     | Training Time |
+| ------------------------ | ------------- | ------------ | ------------- |
+| 4                        | 1.77683       | 0.35200      | 1.64180       |
+| 8                        | 1.42349       | 0.69800      | 13.75726      |
+| 16                       | 1.29654       | 0.71500      | 20.57743      |
+| 32                       | 1.28459       | 0.71200      | 8.48483       | *Early stopping
+| 64                       | 1.24263       | 0.71100      | 8.13903       | *Early stopping
+| 128                      | 1.23388       | 0.70300      | 8.77516       | *Early stopping
+| 256                      | 1.19609       | 0.70300      | 11.59018      | *Early stopping
+| 512                      | 1.23055       | 0.68700      | 11.45539      | *Early stopping
+| 1024                     | 1.26632       | 0.68600      | 12.63863      | *Early stopping
+
+### Pubmed
+
+| Number of hidden units   | Cost          | Accuracy     | Training Time |
+| ------------------------ | ------------- | ------------ | ------------- |
+| 4                        | 0.82043       | 0.77900      | 80.26700      |
+| 8                        | 0.74628       | 0.78300      | 100.88041     | *Early Stopping
+| 16                       | 0.72345       | 0.79200      | 152.10228     | *Early Stopping
+| 32                       | 0.70732       | 0.79100      | 53.47373      | *Early stopping
+| 64                       | 0.70803       | 0.78000      | 44.54841      | *Early stopping
+| 128                      | 0.71174       | 0.79000      | 37.63908      | *Early stopping
+| 256                      | 0.68859       | 0.79000      | 48.93286      | *Early stopping
+| 512                      | 0.67166       | 0.79300      | 59.59024      | *Early stopping
+| 1024                     | 0.71084       | 0.78000      | 63.43390      | *Early stopping
 
 ## Dropout
 
