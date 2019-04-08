@@ -4,8 +4,11 @@ from __future__ import print_function
 import time
 import tensorflow as tf
 
-from gcn.utils import *
-from gcn.models import GCN, MLP
+# from gcn.utils import *
+# from gcn.models import GCN, MLP
+# Allow for editing of utils.py and models.py without re-installing
+from utils import *
+from models import GCN, MLP
 
 # Set random seed
 seed = 123
