@@ -60,30 +60,30 @@ Results on test set from model using default parameters but trained on different
 
 | Optimizer         | Cost          | Accuracy     | Training Time |
 | ----------------- | ------------- | ------------ | ------------- |
-| GradientDescent   | 1.00631       | 0.80900      | 12.59550      |
-| Momentum          | 1.00631       | 0.80900      | 12.92525      |
-| Adagrad           | 1.00631       | 0.80900      | 16.77423      |
-| RMSProp           | 1.00631       | 0.80900      | 12.66784      |
+| GradientDescent   | 1.95421       | 0.06100      | 16.54194      |
+| Momentum (m=0.5)  | 1.95407       | 0.06400      | 12.64782      |
+| Adagrad           | 1.95389       | 0.06900      | 12.55826      |
+| RMSProp           | 1.40574       | 0.78300      | 12.82723      |
 | Adam              | 1.00631       | 0.80900      | 12.71539      |
 
 ### Citeseer
 
 | Optimizer         | Cost          | Accuracy     | Training Time |
 | ----------------- | ------------- | ------------ | ------------- |
-| GradientDescent   | 1.29654       | 0.71500      | 20.88426      |
-| Momentum          | 1.29654       | 0.71500      | 20.75164      |
-| Adagrad           | 1.29654       | 0.71500      | 21.08371      |
-| RMSProp           | 1.29654       | 0.71500      | 20.65680      |
+| GradientDescent   | 1.79975       | 0.15300      | 20.63144      |
+| Momentum (m=0.5)  | 1.79968       | 0.15700      | 21.43084      |
+| Adagrad           | 1.79961       | 0.16700      | 21.35766      |
+| RMSProp           | 1.54546       | 0.71000      | 20.96380      |
 | Adam              | 1.29654       | 0.71500      | 20.57743      |
 
 ### Pubmed
 
 | Optimizer         | Cost          | Accuracy     | Training Time |
 | ----------------- | ------------- | ------------ | ------------- |
-| GradientDescent   | 0.72345       | 0.79200      | 151.96015     | *Early stopping
-| Momentum          | 0.72345       | 0.79200      | 152.09211     | *Early stopping
-| Adagrad           | 0.72345       | 0.79200      | 152.60650     | *Early stopping
-| RMSProp           | 0.72345       | 0.79200      | 153.24154     | *Early stopping
+| GradientDescent   | 1.10612       | 0.38200      | 175.77543     |
+| Momentum (m=0.5)  | 1.10596       | 0.39200      | 176.54888     |
+| Adagrad           | 1.10576       | 0.40100      | 176.33053     |
+| RMSProp           | 0.76957       | 0.77100      | 177.77066     |
 | Adam              | 0.72345       | 0.79200      | 152.10228     | *Early Stopping
 
 ## Activation
@@ -95,24 +95,24 @@ Results on test set from model using different activation functions.
 | Activation        | Cost          | Accuracy     | Training Time |
 | ----------------- | ------------- | ------------ | ------------- |
 | ReLU              | 1.00631       | 0.80900      | 12.71539      |
-| Sigmoid           | 1.00631       | 0.80900      | 12.47668      |
-| Softmax           | 1.00631       | 0.80900      | 12.55104      |
+| Sigmoid           | 1.93431       | 0.16600      | 1.90059       | *Early Stopping
+| Softmax           | 1.95022       | 0.13000      | 2.06188       | *Early Stopping
 
 ### Citeseer
 
 | Activation        | Cost          | Accuracy     | Training Time |
 | ----------------- | ------------- | ------------ | ------------- |
 | ReLU              | 1.29654       | 0.71500      | 20.57743      |
-| Sigmoid           | 1.29654       | 0.71500      | 20.83665      |
-| Softmax           | 1.29654       | 0.71500      | 21.06329      |
+| Sigmoid           | 1.81536       | 0.07700      | 1.42369       | *Early Stopping
+| Softmax           | 1.79583       | 0.16900      | 1.46508       | *Early Stopping
 
 ### Pubmed
 
 | Activation        | Cost          | Accuracy     | Training Time |
 | ----------------- | ------------- | ------------ | ------------- |
 | ReLU              | 0.72345       | 0.79200      | 152.10228     | *Early Stopping
-| Sigmoid           | 0.72345       | 0.79200      | 153.10513     | *Early Stopping
-| Softmax           | 0.72345       | 0.79200      | 154.14993     | *Early Stopping
+| Sigmoid           | 1.09433       | 0.44800      | 24.18261      | *Early Stopping
+| Softmax           | 1.10760       | 0.18000      | 11.66325      | *Early Stopping
 
 ## Learning Rate
 
@@ -161,34 +161,34 @@ TODO: Could compare this with # epochs/learning rate
 
 | Number of hidden layers  | Cost          | Accuracy     | Training Time |
 | ------------------------ | ------------- | ------------ | ------------- |
-| 0                        | 1.00631       | 0.80900      | 12.56621      |
+| 0                        | 1.90896       | 0.75200      | 3.44568       | *Early Stopping
 | 1                        | 1.00631       | 0.80900      | 12.71539      |
-| 2                        | 1.00631       | 0.80900      | 12.61656      |
-| 3                        | 1.00631       | 0.80900      | 12.55104      |
-| 4                        | 1.00631       | 0.80900      | 12.73489      |
-| 5                        | 1.00631       | 0.80900      | 12.51912      |
+| 2                        | 0.91470       | 0.77600      | 7.12302       | *Early Stopping
+| 3                        | 1.41477       | 0.45500      | 4.48670       | *Early Stopping
+| 4                        | 1.16079       | 0.67000      | 6.05123       | *Early Stopping
+| 5                        | 1.37210       | 0.47600      | 6.94880       | *Early Stopping
 
 ### Citeseer
 
 | Number of hidden layers  | Cost          | Accuracy     | Training Time |
 | ------------------------ | ------------- | ------------ | ------------- |
-| 0                        | 1.29654       | 0.71500      | 20.70505      |
+| 0                        | 1.78696       | 0.64700      | 0.98623       | *Early Stopping
 | 1                        | 1.29654       | 0.71500      | 20.57743      |
-| 2                        | 1.29654       | 0.71500      | 20.73452      |
-| 3                        | 1.29654       | 0.71500      | 20.74501      |
-| 4                        | 1.29654       | 0.71500      | 20.39031      |
-| 5                        | 1.29654       | 0.71500      | 20.08235      |
+| 2                        | 1.19124       | 0.66900      | 9.40430       | *Early Stopping
+| 3                        | 1.23329       | 0.66500      | 8.33534       | *Early Stopping
+| 4                        | 1.64697       | 0.38300      | 4.03902       | *Early Stopping
+| 5                        | 1.71613       | 0.16900      | 4.23537       | *Early Stopping
 
 ### Pubmed
 
 | Number of hidden layers  | Cost          | Accuracy     | Training Time |
 | ------------------------ | ------------- | ------------ | ------------- |
-| 0                        | 0.72345       | 0.79200      | 152.88821     | *Early Stopping
+| 0                        | 1.06607       | 0.72700      | 25.28811      | *Early Stopping
 | 1                        | 0.72345       | 0.79200      | 152.10228     | *Early Stopping
-| 2                        | 0.72345       | 0.79200      | 152.51260     | *Early Stopping
-| 3                        | 0.72345       | 0.79200      | 152.38210     | *Early Stopping
-| 4                        | 0.72345       | 0.79200      | 152.09245     | *Early Stopping
-| 5                        | 0.72345       | 0.79200      | 152.87341     | *Early Stopping
+| 2                        | 0.68209       | 0.77400      | 60.63166      | *Early Stopping
+| 3                        | 0.73433       | 0.75500      | 47.27819      | *Early Stopping
+| 4                        | 0.88683       | 0.74300      | 55.66350      | *Early Stopping
+| 5                        | 0.89304       | 0.76100      | 44.33418      | *Early Stopping
 
 ## Number of hidden units
 
