@@ -464,3 +464,12 @@ Results on test set from model using different Max Chebyshev degrees.
 | 4              | 0.63735 | 0.76800    | 17.40259      | *early stopping @101
 | 5              | 0.63735 | 0.76800    | 16.82687      | *early stopping @101
 
+## Improved model
+
+Based on ablation tests, the best results were combined into one model. Most hyperparameters stay at their default values, however, the model is now trained for 300 epochs, the hidden layer has 32 units, a dropout rate of 0.7 is used, a weight decay of 1e-4 is used, and an early stopping of 5.
+
+| Dataset     | Cost    | Accuracy   | Training Time |
+| ----------- | ------- | ---------- | ------------- |
+| Cora        | 0.98723 | 0.81500    | 8.41167       | *early stopping @175
+| Citeseer    | 1.28064 | 0.72100    | 11.29002      | *early stopping @169
+| Pubmed      | 0.71259 | 0.79000    | 60.26863      | *early stopping @135
