@@ -96,7 +96,8 @@ Results on test set from model using different activation functions.
 | ----------------- | ------------- | ------------ | ------------- |
 | ReLU              | 1.00631       | 0.80900      | 12.71539      |
 | Sigmoid           | 1.93431       | 0.16600      | 1.90059       | *Early Stopping
-| Softmax           | 1.95022       | 0.13000      | 2.06188       | *Early Stopping
+| ELU               | 0.77327       | 0.80500      | 15.61630      |
+| tanh              | 0.77695       | 0.80600      | 11.86090      |
 
 ### Citeseer
 
@@ -104,7 +105,8 @@ Results on test set from model using different activation functions.
 | ----------------- | ------------- | ------------ | ------------- |
 | ReLU              | 1.29654       | 0.71500      | 20.57743      |
 | Sigmoid           | 1.81536       | 0.07700      | 1.42369       | *Early Stopping
-| Softmax           | 1.79583       | 0.16900      | 1.46508       | *Early Stopping
+| ELU               | 1.10558       | 0.69100      | 25.34547      |
+| tanh              | 1.10420       | 0.68900      | 21.22430      |
 
 ### Pubmed
 
@@ -112,7 +114,8 @@ Results on test set from model using different activation functions.
 | ----------------- | ------------- | ------------ | ------------- |
 | ReLU              | 0.72345       | 0.79200      | 152.10228     | *Early Stopping
 | Sigmoid           | 1.09433       | 0.44800      | 24.18261      | *Early Stopping
-| Softmax           | 1.10760       | 0.18000      | 11.66325      | *Early Stopping
+| ELU               | 0.62442       | 0.77200      | 90.55492      | *Early Stopping
+| tanh              | 0.62142       | 0.77100      | 93.20575      | *Early Stopping
 
 ## Learning Rate
 
