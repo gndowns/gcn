@@ -1,3 +1,5 @@
+## Note: README for COMP551 MiniProject4 is located in "gcn" folder
+
 # Graph Convolutional Networks
 
 This is a TensorFlow implementation of Graph Convolutional Networks for the task of (semi-supervised) classification of nodes in a graph, as described in our paper:
